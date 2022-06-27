@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+	image-rendering: pixelated;
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial;
+}
+
+[hide] {
+	display: none;
+
+	* {
+		display: none;
+	}
+}
+
+.btn-primary {
+	padding: 15px 50px;
+	border: none;
+
+	&:hover {
+		cursor: pointer;
+		background-color: #e6e6e6;
+	}
+}
+
+.page__main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	&-title {
+		margin-bottom: 20px;
+	}
+}
+
+.character {
+	position: absolute;
+	height: 50px;
+	width: 50px;
+	background-image: url(./images/character.gif);
+	background-size: 100%;
+	image-rendering: pixelated;
+}
+
+.obstacle {
+	filter: brightness(120%);
+	position: absolute;
+	width: 50px;
+	left: 0;
+	background-image: url(./images/wall.png);
+	background-size: contain;
+}
+
+.coin {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	left: 0;
+	background-image: url(./images/coin.gif);
+	background-size: contain;
+}
+
+.wrapper {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.scoreboard {
+	z-index: 100;
+	display: flex;
+	flex-direction: column;
+
+	&__top {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		gap: 10px;
+		margin-bottom: 10px;
+	}
+
+	&__bottom .progress-bar {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-image: linear-gradient(to right, white 0%, #f1f1f1 0%, #f1f1f1 0%);
+		height: 30px;
+		gap: 10px;
+	}
+}
+
+.game-canvas {
+	background-color: black;
+	position: relative;
+	height: 500px;
+	width: 1200px;
+	overflow: hidden;
+	z-index: -1;
+
+	&__text {
+		z-index: 1;
+		width: 1200px;
+		position: absolute;
+		height: 500px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.text {
+			color: white;
+			font-size: 20px;
+			z-index: 100;
+			transition: opacity 0.7s ease;
+			opacity: 100;
+		}
+	}
+
+	.background {
+		* {
+			position: absolute;
+			background-size: contain;
+			image-rendering: pixelated;
+			background-position: bottom bottom;
+			background-size: auto 100%;
+			height: 500px;
+			width: 1200px;
+			z-index: -1;
+		}
+
+		&__far {
+			background-image: url(./images/far.png);
+			animation: parallax 15000s linear infinite;
+		}
+
+		&__mid {
+			background-image: url(./images/sand.png);
+			animation: parallax 10000s linear infinite;
+		}
+
+		&__close {
+			background-image: url(./images/foregound-merged.png);
+			animation: parallax 5000s linear infinite;
+		}
+
+		@keyframes parallax {
+			from {
+				background-position: 0 0;
+			}
+			to {
+				background-position: -1000000px 0;
+			}
+		}
+	}
+
+	&[inactive] *:not(.game-canvas__text):not(.text) {
+		transition: opacity 1s ease;
+		opacity: 0;
+	}
+}

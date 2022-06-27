@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- SEO -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A game with the greatest jellyfish called Jordy">
+    <title>Jellyfish Jordy | Be one with the fish</title>
+    
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="../Media/SEO/favicon.png" />
+    <link rel="shortcut icon" href="../Media/SEO/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="" type="../Media/SEO/favicon.ico" id="favicon" />
+    <link rel="apple-touch-icon" type="image/png" href="../Media/SEO/favicon.png">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    
+    <div class="wrapper">
+        <div class="page__main" id="page-main">
+            <h1 class="page__main-title">Jellyfish Jordy</h1>
+            <button class="btn-primary" id="btn-play">Play</button>
+        </div>
+        <div class="page__secondary" id="game" hide>
+            <div class="scoreboard">
+                <div class="text" id="saveScore"></div>
+                <div class="scoreboard__top">
+                    <p>Score</p>
+                    <p class="score-indicator" id="score"></p>
+                </div>
+                <div class="scoreboard__bottom">
+                    <div class="progress-bar" id="progress-bar">
+                        <p>Level</p>
+                        <p class="level-indicator" id="level"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="game-canvas" id="game-canvas">
+                <div class=background>
+                    <div class="background__far"></div>
+                    <div class="background__mid"></div>
+                    <div class="background__close"></div>
+                </div>
+                <div class="game-canvas__text">
+                    <div class="text" id="text"></div>
+                </div>
+                <div class="character" id="character"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    height: 100%;
+    text-align: center;
+    margin: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url("../../Media/Background/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:  rgb(20, 50, 85);
+    animation: fadeIn;
+    animation-duration: 2s;
+    color:rgb(255, 255, 255)
+}
+
+a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(200, 255, 255);
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
+    grid-template-rows: 150px 1fr 1fr;
+    grid-template-areas:
+        "void0 header header header void1"
+        "void0 dev dev dev void1"
+        "void0 game game game void1";
+}
+
+/*------------------------------------------------*/
+
+.header {
+    padding-left: 21px;
+    padding-right: 21px;
+    grid-area: header;
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    box-shadow: 0 5px 7px 0px rgb(19, 19, 19);
+}
+
+/*------------------------------------------------*/
+
+.aboutUs {
+    padding: 21px;
+    grid-area: dev;
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    box-shadow: 0 5px 7px 0px rgb(19, 19, 19);
+    display: grid;
+    gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+        "title title title"
+        "dev1 dev2 dev3";
+}
+
+.title {
+    grid-area: title;
+}
+
+.dev1 {
+    padding: 21px;
+    grid-area: dev1;
+    background-color: rgb(49, 49, 49);
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.dev1:hover{
+    background-color: rgb(29, 29, 29);
+    transition: all 0.5s;
+    box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+}
+
+.dev2 {
+    padding: 21px;
+    grid-area: dev2;
+    background-color: rgb(49, 49, 49);
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.dev2:hover{
+    background-color: rgb(29, 29, 29);
+    transition: all 0.5s;
+    box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+}
+
+.dev3 {
+    padding: 21px;
+    grid-area: dev3;
+    background-color: rgb(49, 49, 49);
+    transition: all 0.5s;
+    border-radius: 5px;
+}
+
+.dev3:hover{
+    background-color: rgb(29, 29, 29);
+    transition: all 0.5s;
+    box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+}
+
+/*------------------------------------------------*/
+
+.AboutGame {
+    padding: 21px;
+    grid-area: game;
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    box-shadow: 0 5px 7px 0px rgb(19, 19, 19);
+}
+
+/*------------------------------------------------*/
+
+.void0 {
+    grid-area: void0;
+}
+
+.void1 {
+    grid-area: void1;
+}
+
+/*------------------------------------------------*/
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th {
+    font-size: 18px;
+    font-weight: bolder;
+    background-color: rgb(215, 246, 255);
+}
+  
+td, th {
+    border: 1px solid rgba(221, 221, 221, 0);
+    text-align: left;
+    padding: 8px;
+    border-radius: 5px;
+}
+  
+tr:nth-child(even) {
+    background-color: rgb(245, 245, 245);
+}
+
+tr{
+    background-color: rgb(235, 235, 235);
+}
+
+/*------------------------------------------------*/
+
+.cSwitch {
+    max-height: 30px;
+    transition: all 0.5s;
+}
+
+.cSwitch:hover{
+    transform: scale(1.2);
+    transition: all 0.5s;
+}
+
+/*------------------------------------------------*/
+
+.play {
+    box-shadow: 0px 4px 0px 0px rgb(68, 159, 65);
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(78, 169, 75);
+	border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.play:hover {
+	box-shadow: 0px 3px 0px 0px rgb(78, 169, 75);
+    position: relative;
+    top: 1px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(98, 189, 95);
+	border-radius: 5px;
+    border: none;
+}
+
+.play:active {
+	box-shadow: 0px 0px 0px 0px rgba(63, 91, 161, 0);
+	position: relative;
+	top: 4px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(98, 189, 95);
+	border-radius: 5px;
+    border: none;
+}
+
+/*------------------------------------------------*/
+
+.logout {
+    box-shadow: 0px 4px 0px 0px rgb(159, 65, 65);
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(169, 75, 75);
+	border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.logout:hover {
+	box-shadow: 0px 3px 0px 0px rgb(169, 75, 75);
+    position: relative;
+    top: 1px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(189, 95, 95);
+	border-radius: 5px;
+    border: none;
+}
+
+.logout:active {
+	box-shadow: 0px 0px 0px 0px rgba(63, 91, 161, 0);
+	position: relative;
+	top: 4px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(189, 95, 95);
+	border-radius: 5px;
+    border: none;
+}
+
+/*------------------------------------------------*/
+
+.lb {
+    box-shadow: 0px 4px 0px 0px rgb(65, 95, 159);
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(75, 100, 169);
+	border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.lb:hover {
+	box-shadow: 0px 3px 0px 0px rgb(75, 100, 169);
+    position: relative;
+    top: 1px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(95, 125, 189);
+	border-radius: 5px;
+    border: none;
+}
+
+.lb:active {
+	box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
+	position: relative;
+	top: 4px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(95, 125, 189);
+	border-radius: 5px;
+    border: none;
+}
+
+/*------------------------------------------------*/
+
+.pfp {
+    max-height: 100px;
+    border-radius: 50px;
+}
+
+/*------------------------------------------------*/
+
+@media only screen and (max-width: 750px) {
+    
+    .container {
+        display: grid;
+        height: 100%;
+        gap: 10px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 150px 1fr 1fr;
+        grid-template-areas:
+            "header"
+            "dev"
+            "game"
+            "void0"
+            "void1";
+    }
+
+    /*------------------------------------------------*/
+
+    .aboutUs {
+        padding: 21px;
+        grid-area: dev;
+        background-color: rgb(49, 49, 49);
+        border-radius: 5px;
+        box-shadow: 0 5px 7px 0px rgb(19, 19, 19);
+        display: grid;
+        gap: 5px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 69px 1fr 1fr 1fr;
+        grid-template-areas:
+            "title"
+            "dev1"
+            "dev2"
+            "dev3";
+    }
+
+    .title {
+        grid-area: title;
+    }
+
+    .dev1 {
+        padding: 21px;
+        grid-area: dev1;
+        background-color: rgb(49, 49, 49);
+        transition: all 0.5s;
+        border-radius: 5px;
+    }
+
+    .dev1:hover{
+        background-color: rgb(29, 29, 29);
+        transition: all 0.5s;
+        box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+    }
+
+    .dev2 {
+        padding: 21px;
+        grid-area: dev2;
+        background-color: rgb(49, 49, 49);
+        transition: all 0.5s;
+        border-radius: 5px;
+    }
+
+    .dev2:hover{
+        background-color: rgb(29, 29, 29);
+        transition: all 0.5s;
+        box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+    }
+
+    .dev3 {
+        padding: 21px;
+        grid-area: dev3;
+        background-color: rgb(49, 49, 49);
+        transition: all 0.5s;
+        border-radius: 5px;
+    }
+
+    .dev3:hover{
+        background-color: rgb(29, 29, 29);
+        transition: all 0.5s;
+        box-shadow: 0 10px 10px 0px rgb(19, 19, 19);
+    }
+}

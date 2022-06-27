@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+body {
+    height: 1fr;
+    margin: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background-image: url("../../Media/Background/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color:  rgb(40, 70, 105);
+    animation: fadeIn;
+    animation-duration: 2s;
+    color:rgb(0, 0, 0)
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    box-shadow: 0px 4px 0px 0px rgb(68, 159, 65);
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(78, 169, 75);
+	border-radius: 5px;
+    color: white;
+    border: none;
+}
+
+.btn:hover {
+	box-shadow: 0px 3px 0px 0px rgb(78, 169, 75);
+    position: relative;
+    top: 1px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(98, 189, 95);
+	border-radius: 5px;
+    border: none;
+}
+
+.btn:active {
+	box-shadow: 0px 0px 0px 0px rgba(63, 91, 161, 0);
+	position: relative;
+	top: 4px;
+	padding: 14px 12px;
+	text-align: center;
+	display: inline-block;
+	margin: 4px 4px;
+	cursor: pointer;
+	background-color: rgb(98, 189, 95);
+	border-radius: 5px;
+    border: none;
+}
